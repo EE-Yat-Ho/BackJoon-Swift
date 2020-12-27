@@ -6,17 +6,25 @@
 //
 
 
-///20201227 1330 두 수 비교하기
+///20201227 10817 세 수
 import Foundation
 var input = readLine()
 var array = input!.components(separatedBy: " ")
-if Int(array[0])! > Int(array[1])! {
-    print(">")
-} else if Int(array[0])! < Int(array[1])! {
-    print("<")
-} else {
-    print("==")
-}
+var intArray = array.map{Int($0)}
+intArray = intArray.sorted{ $0! < $1! }
+print(intArray[1]!)
+
+///20201227 1330 두 수 비교하기
+//import Foundation
+//var input = readLine()
+//var array = input!.components(separatedBy: " ")
+//if Int(array[0])! > Int(array[1])! {
+//    print(">")
+//} else if Int(array[0])! < Int(array[1])! {
+//    print("<")
+//} else {
+//    print("==")
+//}
 
 ///20201227 10171 고양이
 //print("\\    /\\")
